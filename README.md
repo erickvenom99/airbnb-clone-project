@@ -100,3 +100,48 @@ Builds pipelines for CI/CD (Continuous Integration & Continuous Delivery) to spe
 | property_id | FK | Property reviewed |
 | rating | Integer (1–5) | Review rating |
 | comment | Text | Review content |
+
+
+## Entity Relationships
+
+1. User ↔ Property (Host/Owner Link)  
+   - Type: One-to-Many (1:M)  
+   - A host can own many properties, but each property belongs to only one host.
+
+2. User ↔ Booking (Guest Link)
+   - Type: One-to-Many (1:M)  
+   - A user can make multiple bookings.
+
+3. **Property ↔ Booking (Reservation Link)
+   - Type: One-to-Many (1:M)  
+   - A property can have multiple bookings over time.
+
+4. Property ↔ Amenity (Features Link)
+   - Type: Many-to-Many (M:M)  
+   - A property can have multiple amenities, and an amenity can belong to many properties.
+
+5. User ↔ Review ↔ Property (Feedback Link)
+   - **Type: Two One-to-Many (1:M) Relationships  
+   - A review links both a user (reviewer) and a property (reviewed).
+
+##  Feature Descriptions
+
+###  User Management
+The User Management  module is the entry point of all workflows in the Airbnb Clone.  
+It handles:
+- Registration (guest or host)
+- Authentication (email/password, Google, or Facebook)
+- Role-based access and profile management  
+
+It ensures only verified users can access sensitive features like bookings or property listings.
+
+---
+
+###  Property Management
+The Property Management module creates the platform’s supply side — property listings.  
+It allows hosts to:
+- Create, edit, publish, or deactivate listings  
+- Set daily rates and seasonal pricing  
+- Configure amenities and rules  
+
+This feature transforms a host’s physical home into a digital, searchable, and bookable product.
