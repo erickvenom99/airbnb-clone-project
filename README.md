@@ -145,3 +145,72 @@ It allows hosts to:
 - Configure amenities and rules  
 
 This feature transforms a host’s physical home into a digital, searchable, and bookable product.
+
+## Booking System
+Includes:
+- Real-time availability checks  
+- Booking creation and cancellation  
+- Price calculation  
+- Concurrency control  
+
+It ensures integrity by preventing double-bookings and provides accurate, consistent pricing.
+
+---
+
+## API Security
+
+### Authentication & Session Management
+Security measures include:
+- Password hashing  
+- Token-based authentication (JWT)  
+- Secure communication (TLS/SSL)
+
+These ensure:
+- Protection from data breaches  
+- Identity verification without DB lookups  
+- Safe transmission of sensitive data
+
+
+### Authorization & Access Control
+Implements:
+- RBAC (Role-Based Access Control)
+- Resource-Based Authorization**
+
+Examples:
+- Only hosts can create property listings.  
+- Only guests can make or cancel bookings.  
+- Hosts can edit only their own listings.
+
+This prevents horizontal escalation and ensures privacy and integrity.
+
+### Rate Limiting
+Prevents abuse and DoS attacks by limiting the number of requests per user/IP per minute.
+
+
+### Idempotency
+Ensures repeated POST requests (e.g., booking) do not create duplicate entries or charges.
+
+
+
+## CI/CD Pipeline
+
+CI/CD ensures that the backend is tested, validated, and deployed automatically.
+
+### Continuous Integration (CI)
+Uses GitHub Actionsto:
+- Run tests  
+- Build applications  
+- Detect syntax or logic errors before deployment  
+
+### Continuous Deployment (CD)
+- Continuous Delivery: Keeps code production-ready.  
+- Continuous Deployment: Automatically deploys approved builds.
+
+Automation reduces human error and speeds up delivery cycles for development teams.
+
+
+
+## Tools
+
+- GitHub Actions: For automated testing, building, and deployment.  
+- Docker: For easy deployment, scalability, and team collaboration.
