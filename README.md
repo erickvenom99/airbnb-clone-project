@@ -124,7 +124,7 @@ Builds pipelines for CI/CD (Continuous Integration & Continuous Delivery) to spe
    - **Type: Two One-to-Many (1:M) Relationships  
    - A review links both a user (reviewer) and a property (reviewed).
 
-##  Feature Descriptions
+##  Feature Breakdown
 
 ###  User Management
 The User Management  module is the entry point of all workflows in the Airbnb Clone.  
